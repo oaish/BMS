@@ -1,0 +1,23 @@
+:root {
+    --comp-bg: #333;
+    --comp-color: #fff;
+    --primary-bg: #1d1d1d;
+    --primary-color: #fff;
+    --secondary-color: #aaa;
+    --sidebar-filter: invert(99%) sepia(3%) saturate(2%) hue-rotate(239deg) brightness(113%) contrast(100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}

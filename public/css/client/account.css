@@ -1,0 +1,174 @@
+.account-container {
+    margin: 50px;
+}
+
+.account-container h3 {
+    margin: 0;
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: lighter;
+    padding-bottom: 5px;
+    opacity: 0.65;
+}
+
+.new-account-card {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.65;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-block: 10px 40px;
+}
+
+.new-account-card div {
+    user-select: none;
+    pointer-events: none;
+    font-size: 50px;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.account-details {
+    margin-block: 10px 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.65;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr 2px 1fr;
+    grid-gap: 20px;
+}
+
+.account-details-card h5 {
+    font-weight: lighter;
+}
+
+.acc-details-divider {
+    height: 100%;
+    width: 1px;
+    background-color: var(--secondary-color);
+}
+
+.account-debit-card-div {
+    width: 40%;
+    margin-block: 10px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.65;
+    overflow: hidden;
+}
+
+.debit-card-header {
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-bg);
+}
+
+.debit-card-header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.debit-card-body {
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+}
+
+.db-body-title {
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.db-body-content {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+}
+
+.new-acc-detail-grid {
+    overflow: hidden;
+    width: 50vw;
+    display: grid;
+    grid-gap: 2px;
+    border-radius: 10px;
+    background-color: #0c0c0c;
+    grid-template-columns: 200px 1fr;
+}
+
+.acc-detail-header {
+    background-color: #cccccc;
+    color: #1d1d1d;
+}
+
+.acc-detail-body {
+    background-color: #1d1d1d;
+    color: #CCC;
+}
+
+.acc-detail-header, .acc-detail-body {
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+.new-acc-select {
+    all: unset;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.acc-detail-body.select-control {
+    position: relative;
+}
+
+.acc-detail-body.select-control::before {
+    position: absolute;
+    content: "▼";
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #CCC;
+    z-index: 1000;
+}
+
+.account-container.create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.new-acc-btn {
+    all: unset;
+    cursor: pointer;
+    width: 100px;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #1d1d1d;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+

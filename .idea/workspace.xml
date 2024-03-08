@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41582639-99ba-4e3c-b11c-c8647f01a799" name="Changes" comment="Session for login.php">
+      <change afterPath="$PROJECT_DIR$/client/account/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/auth/forgot_password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/auth/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/auth/reset_password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/banks/banco_seguro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/debit-card-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/icons/logout.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b1c86b8-79da-4ba8-a269-e0914e3df4ea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b1c86b8-79da-4ba8-a269-e0914e3df4ea/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b1c86b8-79da-4ba8-a269-e0914e3df4ea/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0b1c86b8-79da-4ba8-a269-e0914e3df4ea/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/532fd1d1-5146-48b1-87f2-7e0ceea90a8e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/532fd1d1-5146-48b1-87f2-7e0ceea90a8e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/86a776c7-3ad3-438e-abc9-66a370488d7c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/86a776c7-3ad3-438e-abc9-66a370488d7c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/account/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/account/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/session_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/session_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/sign-up.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/auth/sign-up.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/transactions/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/transactions/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/bms.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/bms.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/client/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/client/account.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/client/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/client/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/client/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/client/sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/client/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/client/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/client/transactions.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/client/transactions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/icons/deposit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/icons/deposit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/icons/request.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/icons/request.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/icons/transfer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/icons/transfer.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/icons/withdraw.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/icons/withdraw.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/script.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="2d5b2HNDko4lXVPeqa5S5BZtqY0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/xampp/htdocs/BMS/public/css/client/transactions.css",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BMS\public\img" />
+      <recent name="C:\xampp\htdocs\BMS\public\img\banks" />
+      <recent name="C:\xampp\htdocs\BMS\client" />
+      <recent name="C:\xampp\htdocs\BMS" />
+      <recent name="C:\xampp\htdocs\BMS\database" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BMS\client\auth" />
+      <recent name="C:\xampp\htdocs\BMS\client" />
+      <recent name="C:\xampp\htdocs\BMS\public\css" />
+      <recent name="C:\xampp\htdocs\BMS\public" />
+      <recent name="C:\Users\Oaish Qazi\Downloads\BMS\client\account" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41582639-99ba-4e3c-b11c-c8647f01a799" name="Changes" comment="" />
+      <created>1709300677193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709300677193</updated>
+      <workItem from="1709300678402" duration="15850000" />
+      <workItem from="1709320232052" duration="45000" />
+      <workItem from="1709385693556" duration="15588000" />
+      <workItem from="1709441506646" duration="1903000" />
+      <workItem from="1709443955398" duration="29119000" />
+      <workItem from="1709563963673" duration="11000" />
+      <workItem from="1709748696900" duration="2599000" />
+      <workItem from="1709872335754" duration="10419000" />
+      <workItem from="1709884864888" duration="21129000" />
+      <workItem from="1709912638309" duration="8511000" />
+    </task>
+    <task id="LOCAL-00001" summary="Session for login.php">
+      <option name="closed" value="true" />
+      <created>1709478815227</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709478815227</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Session for login.php">
+      <option name="closed" value="true" />
+      <created>1709478843916</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709478843916</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Session for login.php">
+      <option name="closed" value="true" />
+      <created>1709479091050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709479091050</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Done" />
+    <MESSAGE value="Session for login.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Session for login.php" />
+  </component>
+</project>
