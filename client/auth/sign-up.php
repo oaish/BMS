@@ -81,14 +81,14 @@ if (count($_POST) > 0) {
     <link rel="stylesheet" href="../../public/css/auth.css">
     <link rel="shortcut icon" href="/BMS/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body style="background-color: #333">
 
 <div class="main">
     <div class="container">
         <div class="forms">
             <div class="form login">
                 <p class="heading"
-                   style="background-color: #ffffff; padding-bottom: 10px; border-bottom: 1px #116901 solid;"><span
+                   style="color: #ccc; padding-bottom: 10px; border-bottom: 1px #116901 solid;"><span
                             class="title">Sign-up</span></p>
                 <form action="" method="post">
                     <?php

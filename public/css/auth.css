@@ -31,7 +31,7 @@ html {
 .container .forms {
     display: flex;
     align-items: center;
-    /* height: 440px; */
+    background-color: #1d1d1d;
     width: 170%;
     transition: height 0.2s ease;
 }
@@ -43,7 +43,7 @@ html {
 .container .form {
     width: 50%;
     padding: 30px;
-    background-color: #fff;
+    background-color: #1d1d1d;
     transition: margin-left 0.18s ease;
 }
 

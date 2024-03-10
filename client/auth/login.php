@@ -53,12 +53,12 @@ if (count($_POST) > 0) {
     <link rel="stylesheet" href="../../public/css/auth.css">
     <link rel="shortcut icon" href="/BMS/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body style="background-color: #333">
 <div class="main">
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <p class="heading" style="background-color: #ffffff; border-bottom: 1px #116901 solid;"><span
+                <p class="heading" style="color: #CCC;border-bottom: 1px #116901 solid;"><span
                             class="title">Login</span></p>
                 <form action="" method="post">
                     <div class="input-field inputs" style="margin-top: 30px">
@@ -86,7 +86,7 @@ if (count($_POST) > 0) {
                     </div>
                 </form>
                 <div class="login-signup">
-                <span class="text" style=" font-size: 20px;">Not a member ?
+                <span class="text" style="color: #ccc; font-size: 20px;">Not a member ?
                     <a href="/BMS/client/auth/sign-up.php" class="text signup-link"
                        style=" font-size: 20px;"><b>Signup Now</b></a>
                 </span>
