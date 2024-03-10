@@ -1043,110 +1043,109 @@ u641503458_BMS|schema||u641503458_BMS||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="328" parent="325" name="PayRequests">
+    <table id="328" parent="325" name="Beneficiary">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="329" parent="325" name="Transactions">
+    <table id="329" parent="325" name="PayRequests">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="330" parent="325" name="Users">
+    <table id="330" parent="325" name="Transactions">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <column id="331" parent="327" name="AccountID">
-      <AutoIncrement>5</AutoIncrement>
+    <table id="331" parent="325" name="Users">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="332" parent="327" name="AccountID">
+      <AutoIncrement>11</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="332" parent="327" name="UserID">
+    <column id="333" parent="327" name="UserID">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="333" parent="327" name="AccountNo">
+    <column id="334" parent="327" name="AccountNo">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="334" parent="327" name="AccountType">
+    <column id="335" parent="327" name="AccountType">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="335" parent="327" name="CardNumber">
+    <column id="336" parent="327" name="CardNumber">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="336" parent="327" name="CVV">
+    <column id="337" parent="327" name="CVV">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="337" parent="327" name="ExpiryDate">
+    <column id="338" parent="327" name="ExpiryDate">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="338" parent="327" name="Balance">
+    <column id="339" parent="327" name="Balance">
       <DasType>decimal(10,2 digit)|0s</DasType>
       <DefaultExpression>0.00</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <foreign-key id="339" parent="327" name="Accounts_ibfk_1">
+    <foreign-key id="340" parent="327" name="Accounts_ibfk_1">
       <ColNames>UserID</ColNames>
       <RefColNames>UserID</RefColNames>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="340" parent="327" name="PRIMARY">
+    <index id="341" parent="327" name="PRIMARY">
       <ColNames>AccountID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="341" parent="327" name="CardNumber">
+    <index id="342" parent="327" name="CardNumber">
       <ColNames>CardNumber</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="342" parent="327" name="UserID">
+    <index id="343" parent="327" name="UserID">
       <ColNames>UserID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="343" parent="327" name="PRIMARY">
+    <key id="344" parent="327" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="344" parent="327" name="CardNumber">
+    <key id="345" parent="327" name="CardNumber">
       <UnderlyingIndexName>CardNumber</UnderlyingIndexName>
     </key>
-    <column id="345" parent="328" name="PayRequestID">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="346" parent="328" name="BID">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="346" parent="328" name="FromAccountNo">
+    <column id="347" parent="328" name="MainAccountNo">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="347" parent="328" name="ToAccountNo">
+    <column id="348" parent="328" name="AccountNo">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="348" parent="328" name="Amount">
-      <DasType>decimal(10,2 digit)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
     <index id="349" parent="328" name="PRIMARY">
-      <ColNames>PayRequestID</ColNames>
+      <ColNames>BID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1155,8 +1154,8 @@ u641503458_BMS|schema||u641503458_BMS||UPDATE|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="351" parent="329" name="TransactionID">
-      <AutoIncrement>5</AutoIncrement>
+    <column id="351" parent="329" name="PayRequestID">
+      <AutoIncrement>9</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1176,64 +1175,95 @@ u641503458_BMS|schema||u641503458_BMS||UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="355" parent="329" name="TransactionType">
+    <index id="355" parent="329" name="PRIMARY">
+      <ColNames>PayRequestID</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="356" parent="329" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="357" parent="330" name="TransactionID">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int(11)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="358" parent="330" name="FromAccountNo">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="359" parent="330" name="ToAccountNo">
+      <DasType>bigint(20)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="360" parent="330" name="Amount">
+      <DasType>decimal(10,2 digit)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="361" parent="330" name="TransactionType">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="356" parent="329" name="TransactionDate">
+    <column id="362" parent="330" name="TransactionDate">
       <DasType>timestamp|0s</DasType>
       <DefaultExpression>current_timestamp()</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="357" parent="329" name="PRIMARY">
+    <index id="363" parent="330" name="PRIMARY">
       <ColNames>TransactionID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="358" parent="329" name="PRIMARY">
+    <key id="364" parent="330" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="359" parent="330" name="UserID">
-      <AutoIncrement>34</AutoIncrement>
+    <column id="365" parent="331" name="UserID">
+      <AutoIncrement>40</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="360" parent="330" name="Username">
+    <column id="366" parent="331" name="Username">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="361" parent="330" name="Email">
+    <column id="367" parent="331" name="Email">
       <DasType>varchar(100)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="362" parent="330" name="Password">
+    <column id="368" parent="331" name="Password">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="363" parent="330" name="Phone">
+    <column id="369" parent="331" name="Phone">
       <DasType>bigint(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="364" parent="330" name="DOB">
+    <column id="370" parent="331" name="DOB">
       <DasType>varchar(20)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="365" parent="330" name="PRIMARY">
+    <index id="371" parent="331" name="PRIMARY">
       <ColNames>UserID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="366" parent="330" name="PRIMARY">
+    <key id="372" parent="331" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

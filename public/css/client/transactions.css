@@ -171,3 +171,25 @@
     display: flex;
     align-items: center;
 }
+
+.no-req {
+    background-color: transparent;
+    border: #ccc 3px dashed;
+    color: #ccc;
+}
+
+.trans-history.no-req {
+    display: flex;
+    align-items: center;
+    color: #888;
+    height: 230px;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bolder;
+    justify-content: center;
+    border: #888 4px dashed;
+}
+
+.no-req img {
+    filter: invert(0%);
+}

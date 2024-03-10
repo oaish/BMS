@@ -11,6 +11,7 @@ function generateRandomNumber()
     }
     return $number;
 }
+
 function format_number($number)
 {
     return substr($number, 0, 4) . " - " . substr($number, 4, 4) . " - " . substr($number, 8, 4) . " - " . substr($number, 12, 4);
@@ -24,7 +25,7 @@ $expDate = date('m/y', strtotime('+5 years'));
 
 if (count($_POST) > 0) {
     $sql = "INSERT INTO Accounts (UserID, AccountNo, CardNumber, CVV, ExpiryDate, AccountType) 
-            VALUES (".$_SESSION['Acc']['UserID'].",$acc_no, $card_no, $cvv, '$expDate', '".$_POST['acc_type']."')";
+            VALUES (" . $_SESSION['Acc']['UserID'] . ",$acc_no, $card_no, $cvv, '$expDate', '" . $_POST['acc_type'] . "')";
     $result = mysqli_query($con, $sql);
     header('Location: ./');
     exit();
@@ -32,7 +33,7 @@ if (count($_POST) > 0) {
 ?>
     <div class="content-wrapper">
         <div class="back-btn-div">
-            <div class="back-btn" onclick="history.back()">
+            <div class="back-btn" onclick="location.href='./'">
                 <img src="../../public/img/icons/back.svg" alt="back"/>
             </div>
         </div>
@@ -69,7 +70,8 @@ if (count($_POST) > 0) {
             </div>
 
             <div class="new-acc-btn-group">
-                <button class="new-acc-btn" type="submit" name="btnsubmit" style="background-color: crimson">Create</button>
+                <button class="new-acc-btn" type="submit" name="btnsubmit" style="background-color: crimson">Create
+                </button>
                 <button class="new-acc-btn" type="button" onclick="location.href='./'">Back</button>
             </div>
         </form>

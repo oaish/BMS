@@ -38,8 +38,19 @@ CREATE TABLE Transactions
 CREATE TABLE PayRequests
 (
     PayRequestID  INT AUTO_INCREMENT PRIMARY KEY,
-    FromAccountNo BIGINT            NOT NULL,
-    ToAccountNo   BIGINT            NOT NULL,
+    FromAccountNo BIGINT         NOT NULL,
+    ToAccountNo   BIGINT         NOT NULL,
     Amount        DECIMAL(10, 2) NOT NULL
 );
+
+CREATE TABLE `Beneficiary`
+(
+    `BID`           INT AUTO_INCREMENT PRIMARY KEY,
+    `MainAccountNo` BIGINT NOT NULL,
+    `AccountNo`     BIGINT NOT NULL
+);
+
+
+
+
 

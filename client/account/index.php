@@ -7,15 +7,21 @@ $card_no = $_SESSION['Acc']['CardNumber'];
 ?>
     <div class="content-wrapper">
         <div class="back-btn-div">
-            <div class="back-btn" onclick="history.back()">
+            <div class="back-btn" onclick="location.href='../dashboard.php'">
                 <img src="../../public/img/icons/back.svg" alt="back"/>
             </div>
         </div>
         <hr/>
         <div class="account-container">
-            <h3>Create Account </h3>
-            <div class="new-account-card" onclick="location.href='create.php'">
-                <div>+</div>
+            <div class="account-cards">
+                <div class="new-account-card" onclick="location.href='create.php'">
+                    <div><img src="../../public/img/icons/new_account.svg" alt="add"></div>
+                    <span>New Account</span>
+                </div>
+                <div class="new-account-card" onclick="location.href='beneficiary.php'">
+                    <div><img src="../../public/img/icons/beneficiary.svg" alt="add"></div>
+                    <span>Beneficiary</span>
+                </div>
             </div>
 
             <h3>Account Details</h3>

@@ -232,3 +232,26 @@
     font-weight: bold;
     font-size: 1rem;
 }
+
+
+.no-req {
+    background-color: transparent;
+    border: #ccc 3px dashed;
+    color: #ccc;
+}
+
+.recent-transaction.no-req {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    height: 150px;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    justify-content: center;
+    border: #ccc 2px dashed;
+}
+
+.no-req img {
+    filter: invert(0%);
+}

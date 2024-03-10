@@ -25,6 +25,7 @@
 }
 
 .back-btn {
+    cursor: pointer;
     margin-left: 15px;
     display: flex;
     align-items: center;
@@ -35,10 +36,18 @@
 }
 
 .back-btn:hover {
-    background: var(--primary-bg);
+    /*background: var(--primary-bg);*/
 }
 
 .back-btn img {
     width: 25px;
     height: 25px;
+}
+
+.error {
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    z-index: 10000;
+    padding: 20px;
 }

@@ -16,11 +16,9 @@ $sql = "SELECT * FROM Accounts WHERE UserID = '" . $_SESSION['UserID'] . "'";
 $result = mysqli_query($con, $sql);
 $count = mysqli_num_rows($result);
 if ($count > 0) {
-    $arr = [];
     while ($row = mysqli_fetch_assoc($result)) {
-        $arr[] = $row;
+        $accounts[] = $row;
     }
-    $accounts = $arr;
 }
 
 if (isset($_SESSION['AccIndex'])) {

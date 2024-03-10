@@ -30,7 +30,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 ?>
     <div class="content-wrapper">
         <div class="back-btn-div">
-            <div class="back-btn" onclick="history.back()">
+            <div class="back-btn" onclick="location.href='../dashboard.php'">
                 <img src="../../public/img/icons/back.svg" alt="back"/>
             </div>
         </div>
@@ -62,15 +62,23 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <div class="trans-div">
                     <h2>Pay Requests</h2>
                     <div class="trans-pay-req-div">
+                        <?php if (empty($payRequests)) { ?>
+                            <div class="trans-pay-req no-req">
+                                <img src="../../public/img/icons/rupee.svg" alt="rupee"/>
+                                <div class="pay-req-acc">No Requests</div>
+                            </div>
+                        <?php } ?>
+
                         <?php foreach ($payRequests as $p) { ?>
-                        <div class="trans-pay-req">
-                            <img src="../../public/img/icons/rupee.svg" alt="rupee"/>
-                            <div class="pay-req-acc"><?= $p['FromAccountNo'] ?>:
-                                <span class="pay-req-amount">&#8377; <?= number_format($p['Amount'], 2); ?></span></div>
-                            <a href="transfer.php?accNo=<?= $p['FromAccountNo']?>&amt=<?= $p['Amount'] ?>">
-                                <img src="../../public/img/icons/send.svg" alt="send"/>
-                            </a>
-                        </div>
+                            <div class="trans-pay-req">
+                                <img src="../../public/img/icons/rupee.svg" alt="rupee"/>
+                                <div class="pay-req-acc"><?= $p['FromAccountNo'] ?>:
+                                    <span class="pay-req-amount">&#8377; <?= number_format($p['Amount'], 2); ?></span>
+                                </div>
+                                <a href="transfer.php?accNo=<?= $p['FromAccountNo'] ?>&amt=<?= $p['Amount'] ?>&id=<?= $p['PayRequestID'] ?>">
+                                    <img src="../../public/img/icons/send.svg" alt="send"/>
+                                </a>
+                            </div>
                         <?php } ?>
                     </div>
                 </div>
@@ -78,7 +86,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <h2>Transaction History</h2>
                     <div class="trans-history-div">
                         <div class="trans-history-header">
-                            <div class="trans-history-card">ID</div>
+                            <div class="trans-history-card" style="text-align: center">ID</div>
                             <div class="trans-history-divider"></div>
                             <div class="trans-history-card">From</div>
                             <div class="trans-history-divider"></div>
@@ -91,9 +99,16 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <div class="trans-history-card">Date</div>
                         </div>
                         <div class="trans-history-body">
-                            <?php foreach ($transactions as $t) { ?>
+                            <?php if (empty($transactions)) { ?>
+                                <div class="trans-history no-req">
+                                    <div class="pay-req-acc">No Transactions</div>
+                                </div>
+                            <?php } ?>
+
+
+                            <?php foreach ($transactions as $idx => $t) { ?>
                                 <div class="trans-history">
-                                    <div><?= $t['TransactionID'] ?></div>
+                                    <div style="text-align: center"><?= $idx + 1 ?></div>
                                     <div class="trans-history-divider"></div>
                                     <div><?= $t['FromAccountNo'] == 0 ? "Cash" : $t['FromAccountNo'] ?></div>
                                     <div class="trans-history-divider"></div>

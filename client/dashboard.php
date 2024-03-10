@@ -108,7 +108,7 @@ function format_number($number)
                     <h3>Recent Transactions</h3>
                     <hr>
                     <div class="recent-transaction-header">
-                        <div class="recent-transaction-card">ID</div>
+                        <div class="recent-transaction-card" style="text-align: center">ID</div>
                         <div class="recent-transaction-divider"></div>
                         <div class="recent-transaction-card">From</div>
                         <div class="recent-transaction-divider"></div>
@@ -121,9 +121,15 @@ function format_number($number)
                         <div class="recent-transaction-card">Date</div>
                     </div>
                     <div class="dash-recent-transactions">
-                        <?php foreach ($transactions as $t) { ?>
+                        <?php if (empty($transactions)) { ?>
+                            <div class="recent-transaction no-req">
+                                <div class="pay-req-acc">No Transactions</div>
+                            </div>
+                        <?php } ?>
+
+                        <?php foreach ($transactions as $idx => $t) { ?>
                             <div class="recent-transaction">
-                                <div><?= $t['TransactionID'] ?></div>
+                                <div style="text-align: center"><?= $idx + 1 ?></div>
                                 <div class="recent-transaction-divider"></div>
                                 <div><?= $t['FromAccountNo'] == 0 ? "Cash" : $t['FromAccountNo'] ?></div>
                                 <div class="recent-transaction-divider"></div>

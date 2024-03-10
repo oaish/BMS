@@ -11,27 +11,49 @@
     opacity: 0.65;
 }
 
-.new-account-card {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    opacity: 0.65;
+.account-cards {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    gap: 50px;
     margin-block: 10px 40px;
 }
 
+.new-account-card {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    display: grid;
+    overflow: hidden;
+    border-radius: 10px;
+    grid-template-columns: 1fr 3fr;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .new-account-card div {
+    position: relative;
+    color: #333;
     user-select: none;
     pointer-events: none;
-    font-size: 50px;
-    color: #333;
+    background-color: #ccc;
     font-family: sans-serif;
+}
+
+.new-account-card div img {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.new-account-card span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    background-color: #252525;
 }
 
 .account-details {
@@ -172,3 +194,84 @@
     margin-right: 20px;
 }
 
+.beneficiary-container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.content-main-req {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content-main-req-div {
+    border: 3px solid white;
+    width: 290px;
+    height: fit-content;
+    display: grid;
+    padding: 20px;
+    border-radius: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.request {
+    font-size: 19px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.credit {
+    font-size: 19px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.amount {
+    font-size: 19px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.transfer-btn {
+    width: 100%;
+}
+
+.trans {
+    font-size: 19px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 6px;
+    text-align: center;
+}
+
+.beneficiary-list {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    background-color: #252525;
+}
+
+table {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+tr {
+    border-radius: 15px;
+
+}
