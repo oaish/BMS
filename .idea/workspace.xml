@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41582639-99ba-4e3c-b11c-c8647f01a799" name="Changes" comment="Session for login.php">
+      <change afterPath="$PROJECT_DIR$/client/result.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/transactions/withdraw.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/86a776c7-3ad3-438e-abc9-66a370488d7c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/86a776c7-3ad3-438e-abc9-66a370488d7c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/auth/forgot_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/auth/forgot_password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/auth/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/auth/sign-up.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/auth/sign-up.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/auth/reset_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/auth/reset_password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/session_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/session_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/transactions/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/client/transactions/deposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +51,13 @@
     "database.data.extractors.current.id": "SQL Inserts",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/xampp/php/php.exe",
+    "last_opened_file_path": "C:/xampp/htdocs/BMS/client/transactions",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.idesettings.emmet.jsx",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -61,11 +68,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BMS\client\transactions" />
       <recent name="C:\xampp\htdocs\BMS\public\img" />
       <recent name="C:\xampp\htdocs\BMS\public\img\banks" />
       <recent name="C:\xampp\htdocs\BMS\client" />
       <recent name="C:\xampp\htdocs\BMS" />
-      <recent name="C:\xampp\htdocs\BMS\database" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\BMS\client\account" />
@@ -97,7 +104,13 @@
       <workItem from="1709976758296" duration="273000" />
       <workItem from="1710053385293" duration="7000" />
       <workItem from="1710053400684" duration="433000" />
-      <workItem from="1710061674444" duration="15984000" />
+      <workItem from="1710061674444" duration="16049000" />
+      <workItem from="1710134348165" duration="305000" />
+      <workItem from="1710135233646" duration="173000" />
+      <workItem from="1710147512953" duration="21000" />
+      <workItem from="1710333052501" duration="60000" />
+      <workItem from="1710333143776" duration="3062000" />
+      <workItem from="1710433284295" duration="7029000" />
     </task>
     <task id="LOCAL-00001" summary="Session for login.php">
       <option name="closed" value="true" />

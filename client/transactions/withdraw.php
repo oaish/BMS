@@ -3,19 +3,21 @@ include '../session_check.php';
 include 'layout.php';
 include '../sidebar.php';
 
-if (isset($_POST['deposit'])) {
+if (isset($_POST['withdraw'])) {
     $amount = $_POST['amount'];
     $acc = $_SESSION['Acc']['AccountNo'];
 
     if ($amount <= 0) {
         echo "<script>alert('Error: Amount cannot be Zero or Negative')</script>";
+    } else if ($amount > $_SESSION['Acc']['Balance']) {
+        echo "<script>alert('Error: Amount cannot be greater than Balance')</script>";
     } else {
-        $sql = "UPDATE Accounts SET Balance = Balance + $amount WHERE AccountNo = $acc";
+        $sql = "UPDATE Accounts SET Balance = Balance - $amount WHERE AccountNo = $acc";
         $result = mysqli_query($con, $sql);
-        $sql = "INSERT INTO Transactions (FromAccountNo, ToAccountNo, Amount, TransactionType) VALUES (0, $acc, $amount, 'Deposited')";
+        $sql = "INSERT INTO Transactions (FromAccountNo, ToAccountNo, Amount, TransactionType) VALUES ($acc, 0, $amount, 'Withdrawn')";
         $result = mysqli_query($con, $sql);
         if ($result) {
-            echo "<script>alert('Deposit Successful!')</script>";
+            echo "<script>alert('Withdrawal Successful!')</script>";
         }
     }
 }
@@ -62,11 +64,11 @@ if (isset($_POST['deposit'])) {
     <div class="deposit-container">
         <form action="" method="post" class="deposit-form">
             <label class="deposit-label">
-                Deposit Amount:
+                Withdraw Amount:
                 <input type="number" name="amount" placeholder="Enter Amount">
             </label>
             <br>
-            <button type="submit" name="deposit" value="Deposit">Deposit</button>
+            <button type="submit" name="withdraw" value="Withdraw">Withdraw</button>
         </form>
     </div>
 </div>

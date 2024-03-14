@@ -19,7 +19,7 @@ if (isset($_POST['email'])) {
 
 if (isset($_POST['otp'])) {
     if ($_POST['otp'] == $_SESSION["otp"]) {
-        header("Location: http://localhost/BMS/client/auth/reset_password.php?email=".$_SESSION['reset_email']."&otp=".$_SESSION['otp']);
+        header("Location: /BMS/client/auth/reset_password.php?email=".$_SESSION['reset_email']."&otp=".$_SESSION['otp']);
         exit();
     } else {
         echo "<script>alert('Invalid OTP')</script>";
@@ -35,12 +35,12 @@ if (isset($_POST['otp'])) {
     <link rel="stylesheet" href="../../public/css/auth.css">
     <link rel="shortcut icon" href="/BMS/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body style="background-color: #333">
 <div class="main">
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <p class="heading" style="background-color: #ffffff; border-bottom: 1px #116901 solid;"><span
+                <p class="heading" style="padding-bottom: 15px;color: #ccc;border-bottom: 1px #116901 solid;"><span
                             class="title">Forgot Password</span></p>
                 <form action="" method="post">
                     <?php if (!isset($_POST['submit'])) { ?>

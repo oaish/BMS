@@ -4,7 +4,7 @@ include "../../database/dbx.php";
 $email = "";
 
 if (!isset($_SESSION['reset_email'])) {
-    header("Location: http://localhost/BMS/client/auth/forgot_password.php");
+    header("Location: /BMS/client/auth/forgot_password.php");
     exit();
 }
 
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $sql = "UPDATE Users SET Password = '" . $_POST['newpass'] . "' WHERE Email = '" . $_GET['email'] . "'";
     $result = mysqli_query($con, $sql);
     if ($result) {
-        header("Location: http://localhost/BMS/client/auth/login.php");
+        header("Location: /BMS/client/auth/login.php");
         exit();
     }
 }
@@ -26,12 +26,12 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="../../public/css/auth.css">
     <link rel="shortcut icon" href="/BMS/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body style="background-color: #333">
 <div class="main">
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <p class="heading" style="background-color: #ffffff; border-bottom: 1px #116901 solid;"><span
+                <p class="heading" style="padding-bottom: 15px;color: #ccc; border-bottom: 1px #116901 solid;"><span
                             class="title">Reset Password</span></p>
                 <form action="" method="post" name="resetForm">
                     <div class="input-field inputs" style="margin-top: 30px">

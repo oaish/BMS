@@ -23,8 +23,7 @@ if ($count > 0) {
 
 if (isset($_SESSION['AccIndex'])) {
     $acc_index = $_SESSION['AccIndex'];
-}
-else {
+} else {
     $acc_index = $_SESSION['AccIndex'] = 0;
 }
 $username = $_SESSION['Username'];
@@ -38,7 +37,8 @@ if (isset($_POST['acc_change'])) {
 ?>
 
 <div class="sidebar">
-    <div class="side-profile-div" id="sidebarProfile" onclick="this.classList.toggle('active')">
+    <div class="side-profile-div" id="sidebarProfile"
+         onclick="this.classList.toggle('<?= count($accounts) > 1 ? 'active' : '' ?>')">
         <div class="side-profile-img">
             <img src="/BMS/public/img/banks/banco_seguro.png" alt="">
         </div>
@@ -49,26 +49,35 @@ if (isset($_POST['acc_change'])) {
         <div class="profile-swap">
             <img src="/BMS/public/img/icons/drop_down.svg" alt="swap">
         </div>
-        <form action="" method="post" class="profile-drop-down" id="sidebarDropDown">
-            <?php foreach ($accounts as $idx => $acc) {
-                if ($acc_index != $idx) { ?>
-                    <div class="profile-acc-card">
-                        <button type="submit" name="acc_change" value="<?= $idx ?>">
-                            <?= $acc['AccountNo'] ?> - <?= $acc['AccountType'] ?>
-                        </button>
-                    </div>
+        <?php if (count($accounts) > 1) { ?>
+            <form action="" method="post" class="profile-drop-down" id="sidebarDropDown">
+                <?php foreach ($accounts as $idx => $acc) {
+                    if ($acc_index != $idx) { ?>
+                        <div class="profile-acc-card">
+                            <button type="submit" name="acc_change" value="<?= $idx ?>">
+                                <?= $acc['AccountNo'] ?> - <?= $acc['AccountType'] ?>
+                            </button>
+                        </div>
+                    <?php } ?>
                 <?php } ?>
-            <?php } ?>
-        </form>
+            </form>
+        <?php } ?>
     </div>
 
-    <div class="sidebar-search">
+    <div class="sidebar-search" onclick="document.getElementById('searchBox').focus()" style="cursor:text;">
         <div class="sidebar-search-icon">
             <img src="/BMS/public/img/icons/search.svg" alt="search">
         </div>
         <label>
-            <input type="search" placeholder="Search">
+            <input type="search" placeholder="Search" id="searchBox" style="cursor:text;">
         </label>
+        <script>
+            document.getElementById("searchBox").onkeyup = function (e) {
+                if (e.key === "Enter") {
+                    location.href = '/BMS/client/result.php?query=' + encodeURI(e.target.value);
+                }
+            }
+        </script>
     </div>
 
     <div class="sidebar-btn <?php if ($db_active) echo 'active' ?>" onclick="location.href='/BMS/client/dashboard.php'">

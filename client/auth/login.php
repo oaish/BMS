@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['UserID'])) {
-    header("Location: http://localhost/BMS/client/dashboard.php");
+    header("Location: /BMS/client/dashboard.php");
     exit();
 }
 
@@ -35,7 +35,7 @@ if (count($_POST) > 0) {
                 $cookie_value = $email;
                 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
             }
-            header("Location: http://localhost/BMS/client/dashboard.php");
+            header("Location: /BMS/client/dashboard.php");
             exit();
         }
         else {
