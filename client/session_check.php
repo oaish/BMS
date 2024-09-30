@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (strpos($_SERVER["REQUEST_URI"],"/BMS/client/dashboard.php") !== false || strpos($_SERVER["REQUEST_URI"],"/BMS/client/result.php") !== false) {
+if (strpos($_SERVER["REQUEST_URI"],"/BMS/client/dashboard.php") !== false || strpos($_SERVER["REQUEST_URI"],"/BMS/client/donate.php") !== false || strpos($_SERVER["REQUEST_URI"],"/BMS/client/result.php") !== false) {
     include '../database/dbx.php';
 } else {
     include '../../database/dbx.php';

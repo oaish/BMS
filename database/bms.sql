@@ -1,3 +1,12 @@
+CREATE TABLE Staff (
+    AdminID INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR(100) NOT NULL,
+    Password VARCHAR(100) NOT NULL,
+    Type VARCHAR(100) NOT NULL
+)
+
+INSERT INTO Staff VALUES(DEFAULT, 'admin', '1234', 'Admin'), (DEFAULT, 'teller', 'abcd', 'Bank Teller');
+
 CREATE TABLE Users
 (
     UserID   INT AUTO_INCREMENT PRIMARY KEY,
