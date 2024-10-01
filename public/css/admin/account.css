@@ -1,5 +1,6 @@
 .account-container {
-    margin: 50px;
+    padding: 40px;
+    height: calc(100vh - 72px);
 }
 
 .account-container h3 {
@@ -276,6 +277,10 @@ tr {
 
 }
 
+.user-accounts-div {
+    height: 100%;
+}
+
 .user-account-header,
 .user-account {
     width: 100%;
@@ -316,23 +321,35 @@ tr {
     background-color: var(--secondary-color);
 }
 
-
 .user-accounts-div {
     grid-column: span 2;
     height: 100%;
-    overflow: hidden;
-}
-
-.dash-card.dash-recent {
     padding: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #1d1d1d;
 }
 
 .user-accounts {
-    min-height: calc(300px - 40px - 20px - 20px - 20px - 50px);
+    overflow-y: auto;
+    height: calc(100vh - 285px);
     margin-top: 10px;
     overflow-y: scroll;
 }
 
+.dash-recent-transactions {
+    height: 125px;
+}
+
+.recent-transaction.no-req {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
 
 .no-req {
     background-color: transparent;
@@ -353,8 +370,139 @@ tr {
     border: #ccc 2px dashed;
 }
 
-.user-account-card {
+.user-account-card, .user-account div {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.user-account-card.active {
+    background-color: #1d1d1d;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* USER PAGE START */
+
+.user-page-div {
+    height: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 3fr 2fr;
+}
+
+.user-details-base {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #1d1d1d;
+}
+
+.user-accounts-base {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #1d1d1d;
+}
+
+.user-transactions-base {
+    border-radius: 15px;
+    background-color: #1d1d1d;
+    grid-column: span 2;
+    padding: 20px;
+}
+
+.recent-transaction-header,
+.recent-transaction {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: .9rem;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 30px 2px 1fr 2px 1fr 2px 1fr 2px 1fr 2px 1fr;
+}
+
+.recent-transaction-header {
+    background: #CCC;
+    margin-top: 10px;
+}
+
+.recent-transaction-header .recent-transaction-card {
+    color: #1d1d1d;
+    font-weight: bolder;
+}
+
+.recent-transaction {
+    color: #ccc;
+    background: #252525;
+    margin-top: 10px;
+}
+
+.recent-transaction-card {
+    color: #ccc;
+}
+
+.recent-transaction-divider {
+    height: 100%;
+    width: 1px;
+    background-color: #666;
+}
+
+.recent-transaction-header .recent-transaction-divider {
+    background-color: var(--secondary-color);
+}
+
+.dash-recent {
+    height: 200px;
+}
+
+.user-accounts-container {
+    padding-top: 10px;
+    height: calc(100vh - 500px);
+}
+
+.uaccount-card {
+    gap: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px 5px 5px;
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #ccc;
+}
+
+.uacc-bal {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 3px;
+    display: flex;
+    flex-basis: 80%;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.uacc-bal.active span {
+    display: none;
+}
+
+.uacc-bal span {
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    background-color: rebeccapurple;
+}
+
+/* USER PAGE END */

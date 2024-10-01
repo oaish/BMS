@@ -3,8 +3,8 @@ $current_path = $_SERVER['REQUEST_URI'];
 $db_active = $acc_active = $card_active = $trans_active = $settings_active = '';
 if (strpos($current_path, 'dashboard') !== false) {
     $db_active = 'dashboard';
-} elseif (strpos($current_path, 'account') !== false) {
-    $acc_active = 'account';
+} elseif (strpos($current_path, 'users') !== false) {
+    $acc_active = 'users';
 } elseif (strpos($current_path, 'card') !== false) {
     $card_active = 'card';
 } elseif (strpos($current_path, 'transaction') !== false) {
@@ -38,11 +38,11 @@ $_SESSION['Acc'] = mysqli_fetch_assoc($result);
         <p>Dashboard</p>
     </div>
 
-    <div class="sidebar-btn <?php if ($acc_active) echo 'active' ?>" onclick="location.href='/BMS/admin/accounts/'" style="display: <?= $type === "Bank Teller" ? "none" : "" ?>">
+    <div class="sidebar-btn <?php if ($acc_active) echo 'active' ?>" onclick="location.href='/BMS/admin/users/'" style="display: <?= $type === "Bank Teller" ? "none" : "" ?>">
         <div class="sidebar-btn-icon">
             <img src="/BMS/public/img/icons/account.svg" alt="dashboard">
         </div>
-        <p>Accounts</p>
+        <p>Users</p>
     </div>
 
     <div class="sidebar-btn <?php if ($trans_active) echo 'active' ?>"
