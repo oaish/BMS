@@ -22,8 +22,7 @@ html {
     max-width: 480px;
     width: 100%;
     background: #fff;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.395);
+    border-radius: 15px;
     overflow: hidden;
     margin: 0 30px;
 }
@@ -32,19 +31,16 @@ html {
     display: flex;
     align-items: center;
     background-color: #1d1d1d;
-    width: 170%;
+    width: 100%;
     transition: height 0.2s ease;
 }
 
-.forms {
-    box-shadow: 10px 10px 10px red;
-}
+
 
 .container .form {
-    width: 50%;
+    width: 100%;
     padding: 30px;
     background-color: #1d1d1d;
-    transition: margin-left 0.18s ease;
 }
 
 .container .signup {
@@ -64,7 +60,7 @@ html {
 .container .form .title {
     position: relative;
     font-size: 27px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .form .title::before {
@@ -91,7 +87,6 @@ html {
     outline: none;
     font-size: 16px;
     border-bottom: 2px solid #ccc;
-    border-top: 2px solid transparent;
     transition: all 0.2s ease;
 }
 
@@ -121,7 +116,7 @@ html {
 }
 
 .form a.text {
-    color: #116901;
+    color: crimson;
     text-decoration: none;
 }
 
@@ -134,7 +129,7 @@ html {
 }
 
 .form .button input {
-    background-color: #160169;
+    background-color: crimson;
     border: none;
     color: #fff;
     font-size: 17px;
@@ -146,7 +141,7 @@ html {
 }
 
 .button input:hover {
-    background-color: #010569;
+    background-color: rgb(255, 6, 56);
 
 }
 
@@ -186,7 +181,7 @@ html {
     padding: 13px;
     border: 1px solid #ebebeb;
     background-color: #ebebeb;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 16px;
     transition: all 0.2s ease-out;
     color: #000;
@@ -206,8 +201,9 @@ html {
     margin-top: 50px;
 }
 
+
 .inputs label {
-    color: #000000;
+    color: #ccc;
     font-weight: 600;
     font-size: medium;
     font-family: 'PT Sans', sans-serif;
@@ -322,7 +318,7 @@ form .button {
 
 form .button input {
     height: 100%;
-    width: 100%;
+    width: 100%;    
     border-radius: 5px;
     border: none;
     color: #fff;
@@ -331,11 +327,11 @@ form .button input {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: #4070f4;
+    background: crimson;
 }
 
 form .button input:hover {
-    background: #4070f4;
+    background:rgb(255, 0, 51) ;
 }
 
 .col-12 {
@@ -363,5 +359,5 @@ form .button input:hover {
 }
 
 label {
-    color: #888 !important;
+    color: #ccc !important;
 }
