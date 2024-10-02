@@ -15,7 +15,7 @@ CREATE TABLE Users
     Password VARCHAR(255) NOT NULL,
     Phone    BIGINT       NOT NULL,
     DOB      VARCHAR(20)  NOT NULL,
-    Status   VARCHAR(20)  NOT NULL DEFAULT 'active'
+    Status   VARCHAR(20)  NOT NULL DEFAULT 'inactive'
 );
 
 CREATE TABLE Accounts

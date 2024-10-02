@@ -128,5 +128,4 @@ if (isset($_POST['acc_change'])) {
         </div>
         <p>Settings</p>
     </div>
-
 </div>

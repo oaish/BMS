@@ -58,19 +58,21 @@
 }
 
 .account-details {
-    margin-block: 10px 40px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
     opacity: 0.65;
     display: grid;
-    grid-template-columns: 1fr 2px 1fr 2px 1fr;
+    color: #fff;
+    grid-template-columns: 1fr 2px 1fr 2px 1fr 2px 0.5fr;
     grid-gap: 20px;
+}
+
+.account-details-card h4 {
+    text-overflow: ellipsis;
 }
 
 .account-details-card h5 {
     font-weight: lighter;
+    color: #ccc;
 }
 
 .acc-details-divider {
@@ -508,4 +510,33 @@ tr {
 
 .user-details-container {
     display: grid;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    padding-bottom: 0;
+    flex-direction: row-reverse;
+}
+
+.action-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    display: flex;
+    color: #fff;
+    gap: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    align-items: center;
+    border: 2px solid crimson;
+}
+
+.action-btn.delete {
+    background-color: crimson;
+}
+
+.action-btn.block {
+    background-color: #333;
 }
