@@ -1,0 +1,114 @@
+.accountno{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 5px 5px 20px 5px ;
+}
+
+.accountno input
+{
+    padding: 8px;
+    border: 1px solid #ebebeb;
+    background-color: #ebebeb;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 300;
+    font-family: 'PT Sans', sans-serif;
+    & :focus  {
+        border: none;
+    }
+}
+
+.accountno p{
+    color: #ccc;
+    font-size: larger;
+    margin-right: 20px;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+}
+
+.accountno form{
+    display: flex;
+    justify-items: start;
+    align-items: center;
+}
+
+#find ,.btn{
+    margin: 0px 20px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: crimson;
+    color: #ccc;
+    font-weight: bold;
+    font-size: large;
+    height: 40px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(255, 0, 51);
+    }
+}
+
+.user-accounts-div{
+    height: 40%;
+}
+
+.buttons{
+    margin: 20px 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.user-account.no-req {
+    height: 105px;
+}
+
+.money-transfer{
+    background-color: #1d1d1d;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0px;
+    display: none;
+
+}
+
+
+.money-transfer p{
+    color: #ccc;
+    font-size: larger;
+    margin-right: 20px;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+.deposit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.deposit-label {
+    color: #ccc;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.deposit-label input {
+    padding: 10px;
+}
+
+.deposit-form {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.deposit-form button {
+    padding: 5px;
+}
