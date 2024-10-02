@@ -9,8 +9,8 @@ if (strpos($current_path, 'dashboard') !== false) {
     $card_active = 'card';
 } elseif (strpos($current_path, 'transaction') !== false) {
     $trans_active = 'transaction';
-}elseif (strpos($current_path, 'loancalci') !== false) {
-    $loan_active = 'loancalci';
+}elseif (strpos($current_path, 'loancalc') !== false) {
+    $loan_active = 'loancalc';
 }  
 elseif (strpos($current_path, 'settings') !== false) {
     $settings_active = 'settings';
@@ -107,7 +107,7 @@ if (isset($_POST['acc_change'])) {
         <p>Transactions</p>
     </div>
     <div class="sidebar-btn <?php if ($loan_active) echo 'active' ?>"
-         onclick="location.href='/BMS/client/loancalci/'">
+         onclick="location.href='/BMS/client/loancalc/'">
         <div class="sidebar-btn-icon">
             <img src="/BMS/public/img/icons/loan.png" alt="dashboard">
         </div>
