@@ -6,6 +6,7 @@ if (strpos($_SERVER["REQUEST_URI"],"/BMS/client/dashboard.php") !== false || str
     include '../../database/dbx.php';
 }
 
+
 if(!isset($_SESSION['UserID']) && !isset($_COOKIE['remember_user'])) {
     header("Location: /BMS/client/auth/login.php");
     exit;
