@@ -338,7 +338,7 @@ tr {
 }
 
 .dash-recent-transactions {
-    height: 125px;
+    height: 160px;
 }
 
 .recent-transaction.no-req {
@@ -388,8 +388,8 @@ tr {
     height: 100%;
     display: grid;
     gap: 20px;
-    grid-template-columns: 4fr 2fr;
-    grid-template-rows: 3fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .user-details-base {
@@ -407,7 +407,6 @@ tr {
 .user-transactions-base {
     border-radius: 15px;
     background-color: #1d1d1d;
-    grid-column: span 2;
     padding: 20px;
 }
 
@@ -506,3 +505,7 @@ tr {
 }
 
 /* USER PAGE END */
+
+.user-details-container {
+    display: grid;
+}

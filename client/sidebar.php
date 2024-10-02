@@ -1,6 +1,6 @@
 <?php
 $current_path = $_SERVER['REQUEST_URI'];
-$db_active = $acc_active = $card_active = $trans_active = $settings_active = '';
+$db_active = $acc_active = $card_active = $trans_active = $loan_active = $settings_active = '';
 if (strpos($current_path, 'dashboard') !== false) {
     $db_active = 'dashboard';
 } elseif (strpos($current_path, 'account') !== false) {
@@ -9,7 +9,10 @@ if (strpos($current_path, 'dashboard') !== false) {
     $card_active = 'card';
 } elseif (strpos($current_path, 'transaction') !== false) {
     $trans_active = 'transaction';
-} elseif (strpos($current_path, 'settings') !== false) {
+}elseif (strpos($current_path, 'loancalci') !== false) {
+    $loan_active = 'loancalci';
+}  
+elseif (strpos($current_path, 'settings') !== false) {
     $settings_active = 'settings';
 }
 
@@ -102,6 +105,13 @@ if (isset($_POST['acc_change'])) {
             <img src="/BMS/public/img/icons/transactions.svg" alt="dashboard">
         </div>
         <p>Transactions</p>
+    </div>
+    <div class="sidebar-btn <?php if ($loan_active) echo 'active' ?>"
+         onclick="location.href='/BMS/client/loancalci/'">
+        <div class="sidebar-btn-icon">
+            <img src="/BMS/public/img/icons/loan.png" alt="dashboard">
+        </div>
+        <p>Loan Calculator</p>
     </div>
     <div class="sidebar-btn"
          onclick="location.href='/BMS/client/auth/logout.php'">

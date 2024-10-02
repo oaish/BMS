@@ -78,7 +78,7 @@ if (count($_POST) > 0) {
                             <label for="logCheck" class="text">Remember me</label>
                         </div>
                         <div class="forgot">
-                            <a href="forgot_password.php" class="text">forgot password?</a>
+                            <a href="forgot_password.php" class="text">Forgot password?</a>
                         </div>
                     </div>
                     <div class="input-field button login-btn">
@@ -86,9 +86,15 @@ if (count($_POST) > 0) {
                     </div>
                 </form>
                 <div class="login-signup">
-                <span class="text" style="color: #ccc; font-size: 20px;">Not a member ?
+                <span class="text" style="color: #ccc; font-size: 20px;">Not a member?
                     <a href="/BMS/client/auth/sign-up.php" class="text signup-link"
                        style=" font-size: 20px;"><b>Signup Now</b></a>
+                </span>
+                </div>
+                <div class="login-signup" style=" margin-top: 10px">
+                <span class="text" style="color: #ccc; font-size: 20px;"> For Admin login 
+                    <a href="/BMS/admin/auth/" class="text signup-link"
+                       style=" font-size: 20px;"><b>click here</b></a>
                 </span>
                 </div>
             </div>

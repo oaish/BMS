@@ -5,8 +5,6 @@ include '../sidebar.php';
 require_once('../../database/functions.php');
 
 $MainAccID = $_SESSION['Acc']['AccountNo'];
-$allBeneficiary = getAllBeneficiary($MainAccID);
-
 $error = 0;
 $success = 0;
 $error_message = "";
@@ -28,12 +26,9 @@ if (isset($_POST['acc_no'])) {
     }
 
     if ($error == 0) {
-        //validation
-        // check if acc no exist
         $sql = "SELECT AccountID FROM Accounts WHERE AccountNo = '" . $acc_no . "'";
         $result = mysqli_query($con, $sql);
         if ($result && $row = mysqli_fetch_array($result)) {
-            //check whether this Account ID already added as beneficiary
             $sql = "SELECT BID FROM Beneficiary  WHERE AccountNo = '" . $acc_no . "' AND MainAccountNo = '" . $MainAccID . "'";
             $result = mysqli_query($con, $sql);
             if ($result && $row = mysqli_fetch_array($result)) {
@@ -42,7 +37,6 @@ if (isset($_POST['acc_no'])) {
             }
 
             if ($error == 0) {
-                //insert into beneficiary table
                 $sql = "INSERT INTO Beneficiary (MainAccountNo , AccountNo) VALUES ('" . $MainAccID . "','" . $acc_no . "')";
                 $result = mysqli_query($con, $sql);
                 if (mysqli_affected_rows($con) <= 0) {
@@ -60,9 +54,7 @@ if (isset($_POST['acc_no'])) {
             $error = 1;
             $error_message = "This account no does not exist.";
         }
-
     }
-
 }
 ?>
 <div class="content-wrapper">
@@ -98,46 +90,6 @@ if (isset($_POST['acc_no'])) {
                     </div>
                 </div>
             </form>
-        </div>
-        <div class="request-content">
-            <div class="beneficiary-list">
-                <p style="color:#fff; font-size: 25px; margin-bottom: 10px;">Beneficiary List</p>
-                <table style="color:#fff; width: 100%;">
-                    <tr style="text-align: left; background-color: white; color: #333;">
-                        <th>Sr No</th>
-                        <th>Name</th>
-                        <th>Acc No</th>
-                    </tr>
-                    <?php if (empty($allBeneficiary)) { ?>
-                        <tr>
-                            <td colspan="3">No Beneficiaries </td>
-                        </tr>
-                    <?php } ?>
-
-                    <?php
-                    $sr = 1;
-                    foreach ($allBeneficiary as $key => $val) {
-                        $sql = "SELECT u.Username FROM Accounts acc
-                                INNER JOIN Users u
-                                ON u.UserID = acc.UserID
-                                WHERE acc.AccountNo = '" . $val . "'";
-                        $result = mysqli_query($con, $sql);
-                        if ($result && $row = mysqli_fetch_array($result)) {
-                            $username = $row['Username'];
-                            $acc_no = $val;
-                        }
-                        ?>
-                        <tr>
-                            <td><?= $sr; ?></td>
-                            <td><?= $username; ?></td>
-                            <td><?= $acc_no; ?></td>
-                        </tr>
-                        <?php
-                        $sr++;
-                    }
-                    ?>
-                </table>
-            </div>
         </div>
     </div>
 

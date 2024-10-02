@@ -14,13 +14,13 @@ $card_no = $_SESSION['Acc']['CardNumber'];
         <hr/>
         <div class="account-container">
             <div class="account-cards">
-                <div class="new-account-card" onclick="location.href='create.php'">
-                    <div><img src="../../public/img/icons/new_account.svg" alt="add"></div>
-                    <span>New Account</span>
-                </div>
                 <div class="new-account-card" onclick="location.href='beneficiary.php'">
                     <div><img src="../../public/img/icons/beneficiary.svg" alt="add"></div>
-                    <span>Beneficiary</span>
+                    <span>Add Beneficiary</span>
+                </div>
+                <div class="new-account-card" onclick="location.href='beneficiary_list.php'">
+                    <div><img src="../../public/img/icons/list.svg" alt="add"></div>
+                    <span>Beneficiary List</span>
                 </div>
             </div>
 
