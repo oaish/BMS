@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../public/css/client/sidebar.css">
     <link rel="stylesheet" href="../../public/css/client/settings.css">
     <link rel="shortcut icon" href="/BMS/favicon.ico" type="image/x-icon">
-    <title>Account</title>
+    <title>Loan Calculator</title>
     <script src="../../public/js/script.js"></script>
-    
-
 </head>
 <body>
 

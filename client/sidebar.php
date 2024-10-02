@@ -109,7 +109,7 @@ if (isset($_POST['acc_change'])) {
     <div class="sidebar-btn <?php if ($loan_active) echo 'active' ?>"
          onclick="location.href='/BMS/client/loancalc/'">
         <div class="sidebar-btn-icon">
-            <img src="/BMS/public/img/icons/loan.png" alt="dashboard">
+            <img src="/BMS/public/img/icons/loan.svg" alt="dashboard">
         </div>
         <p>Loan Calculator</p>
     </div>
