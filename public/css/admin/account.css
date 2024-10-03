@@ -341,6 +341,7 @@ tr {
 
 .dash-recent-transactions {
     height: 160px;
+    overflow: auto;
 }
 
 .recent-transaction.no-req {

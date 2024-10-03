@@ -168,7 +168,7 @@ if (isset($_POST['find'])) {
 
 <div class="content-wrapper">
     <div class="back-btn-div">
-        <div class="back-btn" onclick="location.href='../dashboard.php'">
+        <div class="back-btn" onclick="window.location.href = '/BMS/admin/loan/'">
             <img src="../../public/img/icons/back.svg" alt="back" />
         </div>
     </div>

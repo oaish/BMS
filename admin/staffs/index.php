@@ -25,7 +25,11 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 ?>
 <div class="content-wrapper">
-    <div></div>
+    <div class="back-btn-div">
+    <div class="back-btn" onclick="window.location.href = '/BMS/admin/users/'">
+            <img src="../../public/img/icons/back.svg" alt="back" />
+        </div>    
+    </div>
     <hr />
     <div class="dashboard-container">
         <div class="user-accounts-div">

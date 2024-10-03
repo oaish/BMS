@@ -1,0 +1,28 @@
+.bg{
+    background-color: #252525;
+    margin: 20px 0px;
+    border-radius: 15px;
+}
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    flex-direction: row-reverse;
+}
+.action-btn{
+    width: 10%;
+    justify-content: center;
+}
+
+.user-page-div{
+    height: 70%;
+}
+.account-container {
+    overflow: auto;
+}
+
+.select-tag{
+    display: flex;
+    justify-content: space-between;
+}
+

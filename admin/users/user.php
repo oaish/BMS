@@ -35,7 +35,7 @@ function format_number($number)
 
 <div class="content-wrapper">
     <div class="back-btn-div">
-        <div class="back-btn" onclick="location.href='../dashboard.php'">
+        <div class="back-btn" onclick="window.location.href = '/BMS/admin/users/'">
             <img src="../../public/img/icons/back.svg" alt="back" />
         </div>
     </div>
