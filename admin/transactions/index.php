@@ -168,9 +168,7 @@ if (isset($_POST['find'])) {
 
 <div class="content-wrapper">
     <div class="back-btn-div">
-        <div class="back-btn" onclick="location.href='../dashboard.php'">
-            <img src="../../public/img/icons/back.svg" alt="back" />
-        </div>
+        
     </div>
     <hr />
     <div class="account-container">
@@ -311,9 +309,8 @@ if (isset($_POST['find'])) {
                                     <select name="transactiontype" id="ttype" class="debit">
                                         <option value="">Select Transaction Type</option>
                                         <option value="NEFT">NEFT</option>
-                                        <option value="DD">DD</option>
+                                        <option value="RTGS">RTGS</option>
                                     </select>
-
                                 </div>
                                 <div class="transfer-btn">
                                     <button class="trans btn" id="transfer" name="<?= isset($_GET['accNo']) ? 'pay-req-btn' : 'trans-btn' ?>">

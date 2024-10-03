@@ -25,9 +25,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <div class="content-wrapper">
     <div class="back-btn-div">
-        <div class="back-btn" onclick="location.href='../dashboard.php'">
-            <img src="../../public/img/icons/back.svg" alt="back" />
-        </div>
     </div>
     <hr />
     <div class="account-container">

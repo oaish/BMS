@@ -9,10 +9,9 @@ if (strpos($current_path, 'dashboard') !== false) {
     $card_active = 'card';
 } elseif (strpos($current_path, 'transaction') !== false) {
     $trans_active = 'transaction';
-}elseif (strpos($current_path, 'loancalc') !== false) {
-    $loan_active = 'loancalc';
-}  
-elseif (strpos($current_path, 'settings') !== false) {
+} elseif (strpos($current_path, 'loans') !== false) {
+    $loan_active = 'loans';
+} elseif (strpos($current_path, 'settings') !== false) {
     $settings_active = 'settings';
 }
 
@@ -43,7 +42,7 @@ if (isset($_POST['acc_change'])) {
 
 <div class="sidebar">
     <div class="side-profile-div" id="sidebarProfile"
-         onclick="this.classList.toggle('<?= count($accounts) > 1 ? 'active' : '' ?>')">
+        onclick="this.classList.toggle('<?= count($accounts) > 1 ? 'active' : '' ?>')">
         <div class="side-profile-img">
             <img src="/BMS/public/img/banks/banco_seguro.png" alt="">
         </div>
@@ -77,7 +76,7 @@ if (isset($_POST['acc_change'])) {
             <input type="search" placeholder="Search" id="searchBox" style="cursor:text;">
         </label>
         <script>
-            document.getElementById("searchBox").onkeyup = function (e) {
+            document.getElementById("searchBox").onkeyup = function(e) {
                 if (e.key === "Enter") {
                     location.href = '/BMS/client/result.php?query=' + encodeURI(e.target.value);
                 }
@@ -99,22 +98,24 @@ if (isset($_POST['acc_change'])) {
         <p>Account</p>
     </div>
 
+    <div class="sidebar-btn <?php if ($loan_active) echo 'active' ?>"
+        onclick="location.href='/BMS/client/loans/'">
+        <div class="sidebar-btn-icon">
+            <img src="/BMS/public/img/icons/loan.svg" alt="dashboard">
+        </div>
+        <p>Loans</p>
+    </div>
+
     <div class="sidebar-btn <?php if ($trans_active) echo 'active' ?>"
-         onclick="location.href='/BMS/client/transactions/'">
+        onclick="location.href='/BMS/client/transactions/'">
         <div class="sidebar-btn-icon">
             <img src="/BMS/public/img/icons/transactions.svg" alt="dashboard">
         </div>
         <p>Transactions</p>
     </div>
-    <div class="sidebar-btn <?php if ($loan_active) echo 'active' ?>"
-         onclick="location.href='/BMS/client/loancalc/'">
-        <div class="sidebar-btn-icon">
-            <img src="/BMS/public/img/icons/loan.svg" alt="dashboard">
-        </div>
-        <p>Loan Calculator</p>
-    </div>
+    
     <div class="sidebar-btn"
-         onclick="location.href='/BMS/client/auth/logout.php'">
+        onclick="location.href='/BMS/client/auth/logout.php'">
         <div class="sidebar-btn-icon">
             <img src="/BMS/public/img/icons/logout.svg" alt="dashboard">
         </div>
@@ -122,7 +123,7 @@ if (isset($_POST['acc_change'])) {
     </div>
 
     <div class="sidebar-btn btn-bottom <?php if ($settings_active) echo 'active' ?>"
-         onclick="location.href='/BMS/client/settings/'">
+        onclick="location.href='/BMS/client/settings/'">
         <div class="sidebar-btn-icon">
             <img src="/BMS/public/img/icons/settings.svg" alt="dashboard">
         </div>

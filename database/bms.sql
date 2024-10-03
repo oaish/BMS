@@ -32,6 +32,20 @@ CREATE TABLE Accounts
     UNIQUE (CardNumber, AccountNo)
 );
 
+CREATE TABLE Loans (
+    LoanId INT PRIMARY KEY AUTO_INCREMENT,  
+    UserId INT,                             
+    LoanType VARCHAR(20) NOT NULL,
+    LoanAmount DECIMAL(10, 2) NOT NULL,     
+    InterestRate DECIMAL(5, 2) NOT NULL,    
+    RepaymentPeriod INT NOT NULL,           
+    MonthlyInstallment DECIMAL(10, 2) NOT NULL,  
+    LoanStatus VARCHAR(20) NOT NULL,        
+    StartDate DATE NOT NULL,            
+    EndDate DATE NOT NULL,              
+    CONSTRAINT FK_UserId FOREIGN KEY (UserId) REFERENCES Users(UserId)  
+);
+
 CREATE TABLE Transactions
 (
     TransactionID   INT AUTO_INCREMENT PRIMARY KEY,

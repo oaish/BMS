@@ -30,7 +30,11 @@ if (count($_POST) > 0) {
                 $_SESSION[$key] = $value;
             }
 
-            header("Location: /BMS/admin/users");
+            if ($_SESSION['Type'] === "Admin") {
+                header("Location: /BMS/admin/users");
+            } else {
+                header("Location: /BMS/admin/transactions");
+            }
             exit();
         }
         else {

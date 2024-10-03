@@ -1,134 +1,176 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 70%;
-    margin: 50px auto;
-    padding: 20px;
-    background: #1d1d1d;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.box{
-    display: flex;
-    justify-content: space-between;
-}
-
-.left{
-    width: 400px;
-
-}
-
-.content1 {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-input[type="range"] {
-    /* removing default appearance */
-    -webkit-appearance: none;
-    appearance: none; 
-    /* creating a custom design */
-    width: 100%;
-    cursor: pointer;
-    outline: none;
-    /*  slider progress trick  */
-    overflow: hidden;
-    border-radius: 16px;
-
-  }
-
-/* Track: webkit browsers */
-input[type="range"]::-webkit-slider-runnable-track {
-    height: 15px;
-    background: #ffff;
-    border-radius: 16px;
-  }
-
-/* Thumb: webkit */
-input[type="range"]::-webkit-slider-thumb {
-    /* removing default appearance */
-    -webkit-appearance: none;
-    appearance: none; 
-    /* creating a custom design */
-    height: 15px;
-    width: 15px;
-    background-color: #ffff;
-    border-radius: 50%;
-    border: 2px solid crimson;
-    /*  slider progress trick  */
-    box-shadow: -407px 0 0 400px crimson;
-  }
-
-.span-tag ,.span-tag-1 {
-    background-color: rgb(250, 249, 249);
-    color: crimson;
-    font-weight: normal;
-    padding: 5.8px 10px;
-    border-radius: 5px 0px 0px 5px;
-}
-
-.span-tag-1 {
-    border-radius: 0px 5px 5px 0px;
-}
-
-.loan {
+.loan-container {
     position: relative;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    gap: 10px;
+    flex-direction: column;
 }
 
-input[type="text"] {
-    width: 80px;
-    height: 30px; 
-    padding: 10px;
-    border: 0;
-    background-color: rgb(250, 249, 249);
-    border-radius: 0px 5px 5px 0px;
-    color: crimson;
-    font-size: medium;
+.no-req {
+    background-color: transparent;
+    border: #ccc 3px dashed;
+    color: #ccc;
+    height: 100%;
+}
+
+.recent-transaction.no-req {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    height: 150px;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    justify-content: center;
+    border: #ccc 2px dashed;
+}
+
+.pay-req-acc {
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50%;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
-#rate,#year
-{
-    width: 80px;
-    border-radius: 5px 0px 0px 5px;
-    height: 30px;
+.no-req img {
+    filter: invert(0%);
 }
 
-input[type="text"]:focus {
-    outline: none;
+.recent-loan-header,
+.recent-loan {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 30px 2px 1fr 2px 1fr 2px 1fr 2px 1.5fr 2px 1.5fr 2px 1fr;
 }
 
+.recent-loan-header {
+    background: #CCC;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
 
-h1 {
-    text-align: center;
+.recent-loan-header .recent-loan-card {
+    color: #1d1d1d;
+    font-weight: bolder;
+}
+
+.recent-loan {
     color: #ccc;
-    margin-bottom: 30px;
+    background: #252525;
+    margin-bottom: 10px;
 }
 
-p{
+.recent-loan-card {
     color: #ccc;
 }
 
-.results{
-    margin-top: 20px;
+.recent-loan-divider {
+    height: 100%;
+    width: 1px;
+    background-color: #666;
 }
 
-.results div {
-    margin-top: 20px;
+.recent-loan-header .recent-loan-divider {
+    background-color: var(--secondary-color);
+}
+
+.dash-recent-loan-div {
+    background-color: #1d1d1d;
+    padding: 20px;
+    color: #CCC;
+    height: calc(100vh - 200px);
+    border-radius: 15px;
+}
+
+.dash-recent-loans {
+    height: calc(100vh - 220px - 105px);
+    overflow: scroll;
+}
+
+.loan-opt-buttons {
+    width: 100%;
+    padding: 20px;
     display: flex;
+    border-radius: 15px;
+    background-color: #1d1d1d;
     justify-content: space-between;
 }
 
+.loan-opt-btn {
+    background-color: #ccc;
+    color: #1d1d1d;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
+.apply-loan-div {
+    width: 100%;
+    height: max-content;
+    color: #ccc;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    border-radius: 15px;
+    flex-direction: column;
+    background-color: #1d1d1d;
+}
+
+.apply-loan-form {
+    height: 100%;
+}
+
+.account-details {
+    padding: 15px;
+    opacity: 0.65;
+    display: grid;
+    color: #fff;
+    grid-gap: 20px;
+    height: 100%;
+    grid-template-columns: 1fr 2px 1fr 2px 1fr;
+}
+
+.account-details h5 {
+    color: #CCC;
+}
+
+.account-details h4 {
+    color: #FFF;
+    font-size: 1.15rem;
+}
+
+.apply-loan-form .form-input {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    width: 75%;
+}
+
+.account-details-card button {
+    width: 75%;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: crimson;
+}
+
+.apply-loan-form .form-input[readonly] {
+    background-color: #aaa;
+}
