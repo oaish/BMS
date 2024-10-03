@@ -40,14 +40,6 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <div class="trans-div">
                     <h2>Transactions</h2>
                     <div class="trans-btn-group">
-                        <a class="trans-btn" href="deposit.php">
-                            <img src="../../public/img/icons/deposit.svg" alt="deposit"/>
-                            <span>Deposit</span>
-                        </a>
-                        <a class="trans-btn" href="withdraw.php">
-                            <img src="../../public/img/icons/withdraw.svg" alt="withdraw"/>
-                            <span>Withdraw</span>
-                        </a>
                         <a class="trans-btn" href="transfer.php">
                             <img src="../../public/img/icons/transfer.svg" alt="transfer"/>
                             <span>Transfer Money</span>

@@ -7,6 +7,7 @@ require_once('../../database/functions.php');
 
 $allBeneficiary = getAllBeneficiary($_SESSION['Acc']['AccountNo']);
 
+$full_acc = "";
 $error = 0;
 $success = 0;
 $error_message = "";
@@ -50,7 +51,6 @@ if (isset($_POST['toAcc'])) {
         header('Location: /BMS/client/transactions/');
         exit();
     }
-
 }
 
 ?>
@@ -59,29 +59,29 @@ if (isset($_POST['toAcc'])) {
 <div class="content-wrapper">
     <div class="back-btn-div">
         <div class="back-btn" onclick="location.href='/BMS/client/transactions/'">
-            <img src="../../public/img/icons/back.svg" alt="back"/>
+            <img src="../../public/img/icons/back.svg" alt="back" />
         </div>
     </div>
-    <hr/>
+    <hr />
     <div class="transfer-content">
         <div class="content-main">
             <div class="content-main-form">
                 <h2>Transfer Money</h2>
                 <?php
                 if ($error == 1) {
-                    ?>
+                ?>
                     <p style="color:red;margin-bottom:10px;">Error: <?= $error_message; ?></p>
-                    <?php
+                <?php
                 }
                 if ($success == 1) {
-                    ?>
+                ?>
                     <p style="color:green;margin-bottom:10px;">Success: <?= $success_message; ?></p>
-                    <?php
+                <?php
                 }
                 ?>
                 <form action="" method="post">
                     <input type="text" class="debit" value="<?= $fromAcc ?>" name="fromAcc"
-                           readonly>
+                        readonly>
 
                     <?php if (isset($_GET['accNo'])) { ?>
                         <input type="text" class="debit" value="<?= $_GET['accNo'] ?>" name="toAcc" readonly>
@@ -99,17 +99,17 @@ if (isset($_POST['toAcc'])) {
                                     $username = $myrow['Username'];
                                     $acc_no = $myrow['AccountNo'];
                                     $full_acc = $acc_no . " (" . $username . ")";
+                            ?>
+                                    <option value="<?= $acc_no; ?>"><?= $full_acc; ?></option>
+                            <?php
                                 }
-                                ?>
-                                <option value="<?= $acc_no; ?>"><?= $full_acc; ?></option>
-                                <?php
                             }
                             ?>
                         </select>
                     <?php } ?>
 
                     <input type="text" placeholder="Amount" class="amount" name="amount"
-                           value="<?= isset($_GET['amt']) ? $_GET['amt'] : $amount; ?>">
+                        value="<?= isset($_GET['amt']) ? $_GET['amt'] : $amount; ?>">
                     <div class="transfer-btn">
                         <button class="trans" name="<?= isset($_GET['accNo']) ? 'pay-req-btn' : 'trans-btn' ?>">
                             Transfer

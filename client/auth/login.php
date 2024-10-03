@@ -23,9 +23,13 @@ if (count($_POST) > 0) {
     if ($error == 0) {
         $sql = "SELECT * FROM Users WHERE Email = '$email' AND Password = '$pass'";
         $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $row = mysqli_fetch_assoc($result);
         $count = mysqli_num_rows($result);
-        if ($count == 1) {
+
+        if ($row['Status'] === "inactive") {
+            echo "<script>alert('Your account is blocked.')</script>";
+            $error = 1;
+        } else if ($count == 1) {
             foreach ($row as $key => $value) {
                 $_SESSION[$key] = $value;
             }

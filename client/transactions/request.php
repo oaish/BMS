@@ -6,6 +6,7 @@ require_once('../../database/functions.php');
 
 $allBeneficiary = getAllBeneficiary($_SESSION['Acc']['AccountNo']);
 
+$full_acc = "";
 $error = 0;
 $success = 0;
 $error_message = "";
@@ -94,10 +95,10 @@ if (count($_POST) > 0) {
                                 $username = $myrow['Username'];
                                 $acc_no = $myrow['AccountNo'];
                                 $full_acc = $acc_no . " (" . $username . ")";
-                            }
                             ?>
                             <option value="<?= $acc_no; ?>"><?= $full_acc; ?></option>
                             <?php
+                            }
                         }
                         ?>
                     </select>
