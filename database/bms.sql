@@ -64,14 +64,9 @@ CREATE TABLE PayRequests
     Amount        DECIMAL(10, 2) NOT NULL
 );
 
-CREATE TABLE `Beneficiary`
+CREATE TABLE Beneficiary
 (
-    `BID`           INT AUTO_INCREMENT PRIMARY KEY,
-    `MainAccountNo` BIGINT NOT NULL,
-    `AccountNo`     BIGINT NOT NULL
+    BID           INT AUTO_INCREMENT PRIMARY KEY,
+    MainAccountNo BIGINT NOT NULL,
+    AccountNo     BIGINT NOT NULL
 );
-
-
-
-
-

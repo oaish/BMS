@@ -35,7 +35,6 @@ function format_number($number)
 
 <div class="content-wrapper">
     <div class="back-btn-div">
-        
     </div>
     <hr />
     <div class="account-container">
