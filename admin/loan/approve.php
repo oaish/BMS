@@ -145,7 +145,7 @@ $user = mysqli_fetch_assoc($result);
             </div>
             
         </div>
-        <?php if($otherLoan) { ?>
+        <?php if(isset($otherLoan)) { ?>
             <div class="user-page-div">
                 <div class="user-details-base">
                     <div class="select-tag">
