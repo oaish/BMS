@@ -58,7 +58,7 @@ if (count($_POST) > 0) {
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <p class="heading" style="color: #CCC;border-bottom: 1px #116901 solid;"><span
+                <p class="heading" style="color: #CCC;"><span
                             class="title">Login</span></p>
                 <form action="" method="post">
                     <div class="input-field inputs" style="margin-top: 30px">
@@ -86,15 +86,15 @@ if (count($_POST) > 0) {
                     </div>
                 </form>
                 <div class="login-signup">
-                <span class="text" style="color: #ccc; font-size: 20px;">Not a member?
+                <span class="text" style="color: #ccc; font-size: 15px;">Not a member?
                     <a href="/BMS/client/auth/sign-up.php" class="text signup-link"
-                       style=" font-size: 20px;"><b>Signup Now</b></a>
+                       style=" font-size: 16px;"><b>Signup Now</b></a>
                 </span>
                 </div>
                 <div class="login-signup" style=" margin-top: 10px">
-                <span class="text" style="color: #ccc; font-size: 20px;"> For Admin login 
+                <span class="text" style="color: #ccc; font-size: 15px;"> For Admin login 
                     <a href="/BMS/admin/auth/" class="text signup-link"
-                       style=" font-size: 20px;"><b>click here</b></a>
+                       style=" font-size: 16px;"><b>click here</b></a>
                 </span>
                 </div>
             </div>

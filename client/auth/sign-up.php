@@ -7,6 +7,44 @@ if (isset($_SESSION['UserID'])) {
 }
 
 require_once('../../database/dbx.php');
+
+function validate_email($email) {
+    // Validate email format
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+function validateName($name) {
+    // Name should only contain letters and spaces, between 2 and 50 characters
+    if (preg_match("/^[a-zA-Z ]{2,50}$/", $name)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validatePhoneNumber($phone) {
+    // Remove any spaces, dashes, or parentheses
+    $cleanedPhone = preg_replace("/[^0-9]/", '', $phone);
+
+    // Check if the number is 10-15 digits long
+    if (preg_match("/^[0-9]{10,15}$/", $cleanedPhone)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validate_password($password) {
+    // Password validation: minimum 8 characters, at least one letter and one number
+    if (strlen($password) < 8) {
+        return false;
+    }
+    if (!preg_match("/[A-Za-z]/", $password) || !preg_match("/[0-9]/", $password)) {
+        return false;
+    }
+    return true;
+}
+
 $error_msg = '';
 $error = 0;
 $success = 0;
@@ -34,13 +72,31 @@ if (count($_POST) > 0) {
     $contact = $_POST['contact'];
     $acc_type = $_POST['acc-type'];
     $dob = $_POST['dob'];
+    
+    $dobObject = DateTime::createFromFormat('Y-m-d', $dob);
+    $currentDate = new DateTime();
 
     if ($name == '' || $email == '' || $password == '' || $contact == '' || $acc_type == '') {
         $error_msg = 'Please fill mandatory fields';
         $error = 1;
     }
-
-    $sql = "SELECT * FROM Users WHERE email = '$email'";
+    elseif(!validateName($name)) {
+        echo "<script> alert('Invalid Name!'); </script>";
+    }
+    elseif (!validatePhoneNumber($contact)) {
+        echo "<script> alert('Invalid Phone Number!'); </script>";
+    }
+    elseif(!validate_email($email)) {
+    echo "<script> alert('Invalid email format!'); </script>";
+    }
+    elseif(!validate_password($password)) {
+       echo "<script>alert('Password must be at least 8 characters long and contain at least one letter and one number!'); </script>"; 
+    }
+    elseif ($dobObject > $currentDate) {
+        echo "<script>alert('Invalid Date Of Birth!'); </script>"; 
+    }
+    else{
+        $sql = "SELECT * FROM Users WHERE email = '$email'";
     $exists = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($exists);
     if (gettype($row) == 'array') {
@@ -70,7 +126,10 @@ if (count($_POST) > 0) {
             echo json_encode(['error' => 'Insertion failed']);
         }
     }
+    }
 }
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +147,7 @@ if (count($_POST) > 0) {
         <div class="forms">
             <div class="form login">
                 <p class="heading"
-                   style="color: #ccc; padding-bottom: 10px; border-bottom: 1px #116901 solid;"><span
+                   style="color: #ccc; padding-bottom: 10px;"><span
                             class="title">Sign-up</span></p>
                 <form action="" method="post">
                     <?php

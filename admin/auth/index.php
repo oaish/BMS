@@ -54,7 +54,7 @@ if (count($_POST) > 0) {
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <p class="heading" style="color: #CCC;border-bottom: 1px #116901 solid;"><span
+                <p class="heading" style="color: #CCC;"><span
                             class="title">Admin Login</span></p>
                 <form action="" method="post">
                     <div class="input-field inputs" style="margin-top: 30px">
