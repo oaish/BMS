@@ -40,7 +40,7 @@ if (isset($_POST['otp'])) {
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <p class="heading" style="padding-bottom: 15px;color: #ccc;border-bottom: 1px #116901 solid;"><span
+                <p class="heading" style="padding-bottom: 15px;color: #ccc;"><span
                             class="title">Forgot Password</span></p>
                 <form action="" method="post">
                     <?php if (!isset($_POST['submit'])) { ?>

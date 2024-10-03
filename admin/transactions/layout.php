@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="../../public/css/admin/sidebar.css">
     <link rel="stylesheet" href="../../public/css/admin/account.css">
     <link rel="stylesheet" href="../../public/css/admin/transaction.css">
+    
+    <!-- Client CSS -->
+    <link rel="stylesheet" href="../../public/css/client/style.css">
+    <link rel="stylesheet" href="../../public/css/client/sidebar.css">
+    <link rel="stylesheet" href="../../public/css/client/transactions.css">
     <link rel="shortcut icon" href="/BMS/favicon.ico" type="image/x-icon">
     <title>Account</title>
 </head>
