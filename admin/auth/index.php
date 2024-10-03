@@ -3,7 +3,7 @@ session_start();
 require_once('../../database/dbx.php');
 
 if (isset($_SESSION['AdminID'])) {
-    header("Location: /BMS/admin/dashboard.php");
+    header("Location: /BMS/admin/users.php");
     exit();
 }
 
@@ -30,7 +30,7 @@ if (count($_POST) > 0) {
                 $_SESSION[$key] = $value;
             }
 
-            header("Location: /BMS/admin/dashboard.php");
+            header("Location: /BMS/admin/users");
             exit();
         }
         else {

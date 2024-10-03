@@ -6,7 +6,7 @@ $get_token = $_GET['token'];
 $session_token = $_SESSION['token'];
 
 if (strnatcasecmp($session_token, $get_token) != 0) {
-    header("Location: /BMS/admin/dashboard.php");
+    header("Location: /BMS/admin/users");
     exit;
 }
 

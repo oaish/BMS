@@ -4,7 +4,7 @@ include 'layout.php';
 include '../sidebar.php';
 
 if (!isset($_GET['id'])) {
-    header('Location: /BMS/admin/dashboard.php');
+    header('Location: /BMS/admin/users');
     exit;
 }
 $_SESSION['token'] = rand(1000000000, 9999999999);

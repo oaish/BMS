@@ -1,12 +1,10 @@
 <?php
 $current_path = $_SERVER['REQUEST_URI'];
 $db_active = $acc_active = $card_active = $trans_active = $settings_active = '';
-if (strpos($current_path, 'dashboard') !== false) {
-    $db_active = 'dashboard';
+if (strpos($current_path, 'staffs') !== false) {
+    $db_active = 'staffs';
 } elseif (strpos($current_path, 'users') !== false) {
     $acc_active = 'users';
-} elseif (strpos($current_path, 'card') !== false) {
-    $card_active = 'card';
 } elseif (strpos($current_path, 'transaction') !== false) {
     $trans_active = 'transaction';
 } elseif (strpos($current_path, 'settings') !== false) {
@@ -31,18 +29,18 @@ $_SESSION['Acc'] = mysqli_fetch_assoc($result);
         </div>
     </div>
 
-    <div class="sidebar-btn <?php if ($db_active) echo 'active' ?>" onclick="location.href='/BMS/admin/dashboard.php'">
-        <div class="sidebar-btn-icon">
-            <img src="/BMS/public/img/icons/home.svg" alt="dashboard">
-        </div>
-        <p>Dashboard</p>
-    </div>
-
     <div class="sidebar-btn <?php if ($acc_active) echo 'active' ?>" onclick="location.href='/BMS/admin/users/'" style="display: <?= $type === "Bank Teller" ? "none" : "" ?>">
         <div class="sidebar-btn-icon">
             <img src="/BMS/public/img/icons/account.svg" alt="dashboard">
         </div>
         <p>Users</p>
+    </div>
+    
+    <div class="sidebar-btn <?php if ($db_active) echo 'active' ?>" onclick="location.href='/BMS/admin/staffs'"  style="display: <?= $type === "Bank Teller" ? "none" : "" ?>">
+        <div class="sidebar-btn-icon">
+            <img src="/BMS/public/img/icons/staffs.svg" alt="staffs">
+        </div>
+        <p>Staffs</p>
     </div>
 
     <div class="sidebar-btn <?php if ($trans_active) echo 'active' ?>"
