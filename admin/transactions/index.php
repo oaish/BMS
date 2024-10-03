@@ -8,14 +8,16 @@ require_once('../../database/functions.php');
 $acc = null;
 $user = null;
 
-$allBeneficiary = getAllBeneficiary($_SESSION['Account']['AccountNo']);
+// $allBeneficiary = getAllBeneficiary($_SESSION['Account']['AccountNo']);
 
 $error = 0;
 $success = 0;
 $error_message = "";
 $success_message = "";
 $amount = "";
-$fromAcc = $_SESSION['Account']['AccountNo'];
+if (isset($_SESSION['Account']['AccountNo'])) {
+    $fromAcc = $_SESSION['Account']['AccountNo'];
+}
 
 
 if (isset($_POST['deposit'])) {
@@ -78,11 +80,6 @@ if (isset($_POST['toAcc'])) {
     $toAcc = $_POST['toAcc'];
     $amount = $_POST['amount'];
     $ttype = $_POST['transactiontype'];
-
-
-    
-
-   
 
     if ($error == 0) {
         if ($toAcc == "") {
