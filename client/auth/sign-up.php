@@ -33,28 +33,31 @@ function validatePhoneNumber($phone)
         return false;
     }
 }
-
 function isValidPassword($password)
 {
-    if (
-        preg_match('/[a-z]/', $password) &&
-        preg_match('/[A-Z]/', $password) &&
-        preg_match('/[\W]/', $password)) { 
-        return true;
-    }
-    return false;
+    // // Adjusted the special character regex to include a wider range
+    // if (
+    //     preg_match('/[a-z]/', $password) &&    // Lowercase letters
+    //     preg_match('/[A-Z]/', $password) &&    // Uppercase letters
+    //     preg_match('/[\W]/', $password) &&     // Special characters
+    //     preg_match('/[\d]/', $password)        // Digits
+    // ) { 
+    //     return true;
+    // }
+    // return false;
 }
 
 function validate_password($password)
 {
-    if (strlen($password) < 8) {
-        return false;
-    }
-    if (!isValidPassword($password)) {
-        return false;
-    }
-    return true;
+    // if (strlen($password) < 8) {
+    //     return false;  // Password too short
+    // }
+    // if (!isValidPassword($password)) {
+    //     return false;  // Doesn't meet the character requirements
+    // }
+    // return true;
 }
+
 
 function validateDOB($dob, $currentDate) {
     $age = $currentDate->diff($dob)->y;
@@ -110,8 +113,6 @@ if (count($_POST) > 0) {
         echo "<script> alert('Error: Invalid Phone Number!'); </script>";
     } elseif (!validate_email($email)) {
         echo "<script> alert('Error: Invalid email format!'); </script>";
-    } elseif (!validate_password($password)) {
-        echo "<script>alert('Error: Password should contain at least one lowercase, one uppercase, and one special character'); </script>";
     } elseif (!validateDOB($dobObject, $currentDate)) {
         echo "<script>alert('Error: Invalid Date Of Birth!'); </script>";
     } else {
@@ -196,7 +197,7 @@ if (count($_POST) > 0) {
                         <div class="input-field inputs">
                             <label for="password">Password</label>
                             <input type="password" name="password" value="<?= $password; ?>" id="password"
-                                class="form-control" placeholder="Enter your password" required="required" pattern=".{8,}" title="Password should contain at least one lowercase, one uppercase, and one special character">
+                                class="form-control" placeholder="Enter your password" required="required" pattern=".{8,}" title="Password should contain at least 8 characters long">
                         </div>
                         <br>
                         <div class="input-field inputs">

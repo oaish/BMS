@@ -15,6 +15,15 @@ if (strpos($current_path, 'dashboard') !== false) {
     $settings_active = 'settings';
 }
 
+$sql = "SELECT * FROM Users WHERE UserID = '" . $_SESSION['UserID'] . "'";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
+
+if (($row === null) || ($row['Status'] === "inactive")) {
+    header("Location: /BMS/client/auth/logout.php");
+    exit;
+}
+
 $accounts = [];
 $sql = "SELECT * FROM Accounts WHERE UserID = '" . $_SESSION['UserID'] . "'";
 $result = mysqli_query($con, $sql);

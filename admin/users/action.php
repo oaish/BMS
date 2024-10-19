@@ -13,6 +13,8 @@ if (strnatcasecmp($session_token, $get_token) != 0) {
 if (isset($_GET['Delete'])) {
     $sql = "DELETE FROM Accounts WHERE UserID = $id";
     $result = mysqli_query($con, $sql);
+    $sql = "DELETE FROM Loans WHERE UserID = $id";
+    $result = mysqli_query($con, $sql);
     $sql = "DELETE FROM Users WHERE UserID = $id";
     $result = mysqli_query($con, $sql);
     header("Location: /BMS/admin/users/");

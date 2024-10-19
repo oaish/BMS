@@ -8,6 +8,7 @@ require_once('../../database/functions.php');
 $acc = null;
 $user = null;
 
+
 // $allBeneficiary = getAllBeneficiary($_SESSION['Account']['AccountNo']);
 
 $error = 0;
@@ -15,6 +16,22 @@ $success = 0;
 $error_message = "";
 $success_message = "";
 $amount = "";
+
+if (isset( $_SESSION['Account']['AccountNo'])) {
+    $acno =  $_SESSION['Account']['AccountNo'];
+$sql = "SELECT * FROM Accounts WHERE AccountNo != $acno";
+$result = mysqli_query($con, $sql);
+$allBeneficiary =[];
+
+while($row=mysqli_fetch_assoc($result))
+{
+    $allBeneficiary[] =  $row;
+}
+// echo "<script>alert('" . json_encode($allBeneficiary) ."')</script>";
+// printError($allBeneficiary);
+
+}
+
 if (isset($_SESSION['Account']['AccountNo'])) {
     $fromAcc = $_SESSION['Account']['AccountNo'];
 }
@@ -154,6 +171,8 @@ if (isset($_POST['find'])) {
         $result = mysqli_query($con, $sql);
         $_SESSION['User'] = mysqli_fetch_assoc($result);
         $user = $_SESSION['User'];
+
+       
     } else {
         $acc = null;
     }
@@ -288,7 +307,7 @@ if (isset($_POST['find'])) {
                                                 $sql = "SELECT u.Username,acc.AccountNo FROM Accounts acc
                                                     INNER JOIN Users u
                                                     ON u.UserID = acc.UserID
-                                                    WHERE acc.AccountNo = '" . $bacc . "'";
+                                                    WHERE acc.AccountNo = '" . $bacc['AccountNo'] . "'";
                                                 $result = mysqli_query($con, $sql);
                                                 if ($result && $myrow = mysqli_fetch_array($result)) {
                                                     $username = $myrow['Username'];

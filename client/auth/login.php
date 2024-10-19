@@ -26,7 +26,8 @@ if (count($_POST) > 0) {
         $row = mysqli_fetch_assoc($result);
         $count = mysqli_num_rows($result);
 
-        if ($row['Status'] === "inactive") {
+        
+        if ($count == 1 && $row['Status'] === "inactive") {
             echo "<script>alert('Your account is blocked.')</script>";
             $error = 1;
         } else if ($count == 1) {
